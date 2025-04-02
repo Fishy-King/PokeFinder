@@ -45,3 +45,16 @@ button{
     border-radius: 20px;
     margin: 20px;
 }
+
+.dis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 3px;
+}
