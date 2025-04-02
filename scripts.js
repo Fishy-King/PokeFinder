@@ -7,12 +7,15 @@
 
 async function fetchData(){
 
+    hideError();
+
     try{
 
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
         if(!response.ok){
+            showError()
             throw new Error("Could not fetch resource");
         }
 
@@ -26,4 +29,20 @@ async function fetchData(){
     catch(error){
         console.error(error);
     }
+}
+
+function showError() {
+    const errorMessageElement = document.getElementById('errorText');
+    errorMessageElement.style.display = 'block';
+}
+
+
+function hideError() {
+    const errorMessageElement = document.getElementById('errorText');
+        errorMessageElement.style.display = 'none';
+
+    const imgElement = document.getElementById("pokemonSprite");
+
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "none";
 }

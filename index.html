@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="text" id="pokemonName" placeholder="Enter pokemon name">
-    <button onclick="fetchData()">Fetch pokemon</button><br>
-    <img src="" alt="No image found :(" id="pokemonSprite" style="display: none;">
+    <div class="box">
+        <input type="text" id="pokemonName" placeholder="Enter pokemon name">
+        <button onclick="fetchData()">Fetch pokemon</button><br>
+    </div>
+    <div class="lock">
+        <img src="" alt="No image found :(" id="pokemonSprite" style="display: none;">
+    </div>
+    <p id="errorText" style="display: none;">No pokemon with that name found, check your spelling and try again</p>
 
     <script src="scripts.js"></script>
 </body>

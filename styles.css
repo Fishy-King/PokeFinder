@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: rgb(191, 237, 255);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#errorText{
+    color: red;
+    font-weight: bold;
+}
+
+button{
+    background-color: rgb(134, 252, 87);
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+.box{
+    display: flex;
+    background-color: rgb(87, 168, 255);
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 20px;
+    flex-direction: row;
+}
+
+.lock{
+    display: flex;
+    background-color: rgb(87, 168, 255);
+    width: 96px;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
