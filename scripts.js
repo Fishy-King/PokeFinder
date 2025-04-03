@@ -1,32 +1,31 @@
-// fetch = Function used for making HTTP requests to fetch resources.
-//              (JSON style data, images, files)
-//              Simplifies asynchronous data fetching in JavaScript and
-//              used for interacting with APIs to retrieve and send
-//              data asynchronously over the web.
-//              fetch(url, {options})
-
-async function fetchData(){
-
+async function fetchData() {
     hideError();
 
-    try{
-
+    try {
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+        const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
-        if(!response.ok){
-            showError()
+        if (!response.ok || !response2.ok) {
+            showError();
             throw new Error("Could not fetch resource");
         }
 
         const data = await response.json();
-        const pokemonSprite = data.sprites.front_default;
-        const imgElement = document.getElementById("pokemonSprite");
+        const data2 = await response2.json();
 
-        imgElement.src = pokemonSprite;
-        imgElement.style.display = "block";
-    }
-    catch(error){
+        const frontSprite = data.sprites.front_default;
+        const backSprite = data2.sprites.back_default;
+
+        const frontImg = document.getElementById("pokemonSprite");
+        const backImg = document.getElementById("pokemonSpriteBack");
+
+        frontImg.src = frontSprite;
+        backImg.src = backSprite;
+
+        frontImg.style.display = "block";
+        backImg.style.display = "block";
+    } catch (error) {
         console.error(error);
     }
 }
@@ -45,4 +44,9 @@ function hideError() {
 
         imgElement.src = pokemonSprite;
         imgElement.style.display = "none";
+    
+    const imgElement2 = document.getElementById("pokemonSpriteBack");
+
+    imgElement2.src = pokemonSprite;
+    imgElement2.style.display = "none";
 }
