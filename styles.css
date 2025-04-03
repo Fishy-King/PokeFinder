@@ -6,6 +6,13 @@ body{
     align-items: center;
     text-align: center;
     flex-direction: column;
+    /* IMPORTANT - USE IN NEW VERSIONS */
+    background-image: url('bk.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
 
 #errorText{
@@ -16,14 +23,16 @@ body{
 button{
     background-color: rgb(134, 252, 87);
     border: none;
-    border-radius: 5px;
-    width: 100px;
+    border-radius: 20px;
+    width: 125px;
     height: 50px;
 }
 
 .box{
     display: flex;
-    background-color: rgb(87, 168, 255);
+    /* IMPORTANT - USE IN NEW VERSIONS */
+    background-color: rgba(87, 168, 255, 0.85);
+    /* Done */
     width: 400px;
     height: 200px;
     justify-content: center;
@@ -36,7 +45,9 @@ button{
 
 .lock{
     display: flex;
-    background-color: rgb(87, 168, 255);
+    /* IMPORTANT - USE IN NEW VERSIONS */
+    background-color: rgb(87, 168, 255, 0.85);
+    /* Done */
     width: 96px;
     height: 96px;
     justify-content: center;
@@ -52,9 +63,24 @@ button{
     align-items: center;
     text-align: center;
     flex-direction: row;
-    font-size: 10px;
+    font-size: 11px;
     position: fixed;
     bottom: 0;
     left: 0;
+    /* IMPORTANT - USE IN NEW VERSIONS */
+    background-color: rgb(87, 168, 255, 0.85);
+    border-radius: 5px;
     margin: 3px;
+    padding: 3px;
+}
+
+/* IMPORTANT - USE IN NEW VERSIONS */
+.all{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
 }
