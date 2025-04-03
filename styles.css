@@ -7,7 +7,7 @@ body{
     text-align: center;
     flex-direction: column;
     /* IMPORTANT - USE IN NEW VERSIONS */
-    background-image: url('/bk.png');
+    background-image: url('https://fishy-king.github.io/PokeFinder/bk.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
