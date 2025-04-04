@@ -14,12 +14,28 @@
         <input type="text" id="pokemonName" placeholder="Enter pokemon name">
         <button onclick="fetchData()">Fetch pokemon</button><br>
     </div>
-    <div class="row">
-        <div class="lock">
-            <img src="" alt="No image found :(" id="pokemonSprite" style="display: none;">
+    <div class="col">
+        <div class="tbor">
+            <p style="margin-bottom: 0;">Normal:</p>
         </div>
-        <div class="lock">
-            <img src="" alt="No image found :(" id="pokemonSpriteBack" style="display: none;">
+        <div class="row">
+            <div class="lock">
+                <img src="" alt="No image found :(" id="pokemonSprite" style="display: none;">
+            </div>
+            <div class="lock">
+                <img src="" alt="No image found :(" id="pokemonSpriteBack" style="display: none;">
+            </div>
+        </div>
+        <div class="tbor">
+            <p style="margin-bottom: 0;">Shiny:</p>
+        </div>
+        <div class="row">
+            <div class="lock">
+                <img src="" alt="No image found :(" id="pokemonSpriteShiny" style="display: none;">
+            </div>
+            <div class="lock">
+                <img src="" alt="No image found :(" id="pokemonSpriteShinyBack" style="display: none;">
+            </div>
         </div>
     </div>
     <p id="errorText" style="display: none;">No pokemon with that name found, check your spelling and try again</p>

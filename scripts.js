@@ -4,31 +4,38 @@ async function fetchData() {
     try {
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-        const response2 = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
-        if (!response.ok || !response2.ok) {
+        if (!response.ok) {
             showError();
             throw new Error("Could not fetch resource");
         }
 
         const data = await response.json();
-        const data2 = await response2.json();
 
         const frontSprite = data.sprites.front_default;
-        const backSprite = data2.sprites.back_default;
+        const backSprite = data.sprites.back_default;
+        const shinySprite = data.sprites.front_shiny;
+        const shinyBackSprite = data.sprites.back_shiny;
 
         const frontImg = document.getElementById("pokemonSprite");
         const backImg = document.getElementById("pokemonSpriteBack");
+        const shinyImg = document.getElementById("pokemonSpriteShiny");
+        const shinyBackImg = document.getElementById("pokemonSpriteShinyBack");
 
         frontImg.src = frontSprite;
         backImg.src = backSprite;
+        shinyImg.src = shinySprite;
+        shinyBackImg.src = shinyBackSprite;
 
         frontImg.style.display = "block";
         backImg.style.display = "block";
+        shinyImg.style.display = "block";
+        shinyBackImg.style.display = "block";
     } catch (error) {
         console.error(error);
     }
 }
+
 
 function showError() {
     const errorMessageElement = document.getElementById('errorText');
@@ -49,4 +56,14 @@ function hideError() {
 
     imgElement2.src = pokemonSprite;
     imgElement2.style.display = "none";
+
+    const imgElement3 = document.getElementById("pokemonSpriteShiny");
+
+    imgElement3.src = pokemonSprite;
+    imgElement3.style.display = "none";
+
+    const imgElement4 = document.getElementById("pokemonSpriteShinyBack");
+
+    imgElement4.src = pokemonSprite;
+    imgElement4.style.display = "none";
 }
