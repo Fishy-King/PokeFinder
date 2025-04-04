@@ -16,6 +16,8 @@ body{
 #errorText{
     color: red;
     font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0px;
 }
 
 button{
@@ -26,14 +28,19 @@ button{
     height: 50px;
     box-shadow: 1px 3px 2px black;
     cursor: pointer;
+    transition: 0.3s;
 }
 button:hover{
     background-color: rgb(94, 176, 61);
-    transition: 0.4s;
+    width: 115px;
+    height: 55px;
+    transition: 0.3s;
 }
 button:active{
     background-color: rgb(120, 227, 78);
-    transition: 0s;
+    width: 120px;
+    height: 60px;
+    transition: 0.1s;
 }
 
 .box{
