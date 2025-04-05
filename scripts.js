@@ -49,6 +49,9 @@ function showError() {
 
     const errorMessageElement2 = document.getElementById('errorInfo');
     errorMessageElement2.style.display = 'block';
+
+    const errorMessageElement3 = document.getElementById('errorDiv');
+    errorMessageElement3.style.display = 'block';
 }
 
 
@@ -58,6 +61,9 @@ function hideError() {
 
     const errorMessageElement2 = document.getElementById('errorInfo');
     errorMessageElement2.style.display = 'none';
+
+    const errorMessageElement3 = document.getElementById('errorDiv');
+    errorMessageElement3.style.display = 'none';
 
     const imgElement = document.getElementById("pokemonSprite");
 

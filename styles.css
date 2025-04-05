@@ -150,4 +150,5 @@ input{
         width: max-content;
         margin: 0;
         margin-top: 5px;
+        display: none;
 }
