@@ -4,7 +4,8 @@ async function fetchData() {
     try {
         const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-
+        console.info(`Fetching ${pokemonName} from pokeAPI`)
+        
         if (!response.ok) {
             showError();
             throw new Error("Could not fetch resource");
@@ -31,8 +32,13 @@ async function fetchData() {
         backImg.style.display = "block";
         shinyImg.style.display = "block";
         shinyBackImg.style.display = "block";
-    } catch (error) {
-        console.error(error);
+
+        const pokeName2 = document.getElementById("pokemonName").value.toLowerCase()
+        console.info(`${pokeName2} was found!`);
+    }
+    catch (error) {
+        const pokeName = document.getElementById("pokemonName").value.toLowerCase()
+        console.error(`${pokeName} was not found. Ensure proper spelling and try again.`);
     }
 }
 
@@ -40,12 +46,18 @@ async function fetchData() {
 function showError() {
     const errorMessageElement = document.getElementById('errorText');
     errorMessageElement.style.display = 'block';
+
+    const errorMessageElement2 = document.getElementById('errorInfo');
+    errorMessageElement2.style.display = 'block';
 }
 
 
 function hideError() {
     const errorMessageElement = document.getElementById('errorText');
         errorMessageElement.style.display = 'none';
+
+    const errorMessageElement2 = document.getElementById('errorInfo');
+    errorMessageElement2.style.display = 'none';
 
     const imgElement = document.getElementById("pokemonSprite");
 
