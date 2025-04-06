@@ -1,0 +1,18 @@
+#errorText{
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+    margin: 4px;
+}
+#errorInfo{
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}

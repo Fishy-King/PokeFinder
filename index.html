@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéFinder</title>
     <link rel="icon" href="ball.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <link id="pagestyle" rel="stylesheet" href="default.css">
 </head>
 <body>
     <div class="all"></div>
     <div class="box">
         <input type="text" id="pokemonName" placeholder="Enter pokemon name or ID">
-        <button onclick="fetchData()">Fetch pokemon</button><br>
+        <button class="fbut" onclick="fetchData()">Fetch pokemon</button><br>
     </div>
     <div class="col">
         <div class="tbor">
@@ -43,7 +43,12 @@
         <p id="errorInfo" style="display: none;">No pokemon with that name found, check your spelling and try again</p>
     </div>
     <div class="dis">
-        <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer"><i>This site uses PokéApi. Click here to go to their site.</i></a>
+        <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;"><i>This site uses PokéApi. Click here to go to their site.</i></a>
+    </div>
+    <div class="dis2">
+        <button id="stylesheet1">Default mode</button>
+        <button id="stylesheet2">Dark mode</button>
+        <button id="stylesheet3">Simple mode</button>
     </div>
     <script src="scripts.js"></script>
 </body>

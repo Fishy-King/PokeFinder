@@ -1,0 +1,210 @@
+body{
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: rgb(191, 237, 255);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-image: url('bk.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: 1s;
+}
+
+#errorText{
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+    margin: 4px;
+}
+#errorInfo{
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+button{
+    background-color: rgb(134, 252, 87);
+    border: none;
+    border-radius: 20px;
+    width: 110px;
+    height: 50px;
+    box-shadow: 1px 3px 2px black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: rgb(94, 176, 61);
+    width: 115px;
+    height: 55px;
+    transition: 0.3s;
+}
+button:active{
+    background-color: rgb(120, 227, 78);
+    width: 120px;
+    height: 60px;
+    transition: 0.1s;
+}
+
+.box{
+    display: flex;
+    background-image: linear-gradient(rgba(87, 168, 255, 0.85), rgba(87, 168, 255, 0.55));
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 20px;
+    flex-direction: row;
+    box-shadow: 1px 3px 2px black;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.lock{
+    display: flex;
+    width: 96px;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+    box-shadow: 1px 3px 2px black;
+    background-image: linear-gradient(rgba(87, 168, 255, 0.90), rgba(87, 168, 255, 0.2));
+}
+
+.dis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(87, 168, 255, 0.85);
+    border-radius: 5px;
+    margin: 3px;
+    padding: 2px;
+    box-shadow: 1px 1px 2px black;
+}
+.dis2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(87, 168, 255, 0.85);
+    border-radius: 5px;
+    margin: 3px;
+    padding: 3px;
+    box-shadow: 1px 1px 2px black;
+}
+.dis2 button{
+    background-color: rgb(134, 252, 87);
+    border: none;
+    border-radius: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 0.6rem;
+    box-shadow: 1px 3px 2px black;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 3px;
+    padding: 1px;
+}
+.dis2 button:hover{
+    background-color: rgb(94, 176, 61);
+    border: none;
+    border-radius: 20px;
+    width: 85px;
+    height: 45px;
+    font-size: 0.7rem;
+    box-shadow: 1px 3px 2px black;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 3px;
+    padding: 1px;
+}
+.dis2 button:active{
+    background-color: rgb(120, 227, 78);
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+    height: 50px;
+    font-size: 0.8rem;
+    box-shadow: 1px 3px 2px black;
+    cursor: pointer;
+    transition: 0.1s;
+    margin: 3px;
+    padding: 1px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.all{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.tbor{
+    background-color: rgb(87, 168, 255, 0.85);
+    display: inline-block;
+    padding: 3px;
+    border-radius: 10px;
+    width: max-content;
+    margin: 0;
+    margin-top: 5px;
+}
+.tbor p{
+    display: inline;
+    margin: 0;
+}
+
+.errorDiv{
+        background-color: rgb(87, 168, 255);
+        display: inline-block;
+        padding: 3px;
+        border-radius: 10px;
+        width: max-content;
+        margin: 0;
+        margin-top: 5px;
+        display: none;
+}
